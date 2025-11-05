@@ -1,0 +1,108 @@
+/* Основные стили для сайта */
+
+/* Обычный шрифт - Arial, 12 */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Жирный шрифт - Arial bold, 14 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0 0 10px 0;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.app-header h1 {
+  font-size: 18px;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.venus-section, .families-section {
+  padding: 20px;
+  flex: 1;
+}
+
+.venus-section {
+  background: linear-gradient(135deg, #ffeef7 0%, #f8f9ff 100%);
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.families-section {
+  background-color: #fafafa;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+  
+  .venus-section, .families-section {
+    padding: 15px;
+  }
+  
+  .app-header {
+    padding: 15px;
+  }
+  
+  .app-header h1 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .venus-section, .families-section {
+    padding: 10px;
+  }
+  
+  .app-header {
+    padding: 10px;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 12px;
+  }
+}
+
+/* Загрузка */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.loading-spinner {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  color: #666;
+}

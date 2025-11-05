@@ -1,0 +1,92 @@
+.venus-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.venus-image-container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.venus-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.miasma-buttons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.miasma-button {
+  position: absolute;
+  pointer-events: auto;
+  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 8px 12px;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  max-width: 120px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.miasma-button:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #764ba2 0%, #667eea 100%);
+}
+
+/* Позиционирование кнопок вокруг Венеры */
+.miasma-button:nth-child(1) { top: 15%; left: 25%; } /* Острый */
+.miasma-button:nth-child(2) { top: 25%; left: 45%; } /* Тифоидный */
+.miasma-button:nth-child(3) { top: 35%; left: 65%; } /* Псорический */
+.miasma-button:nth-child(4) { top: 50%; left: 75%; } /* Грибковый */
+.miasma-button:nth-child(5) { top: 65%; left: 65%; } /* Малярийный */
+.miasma-button:nth-child(6) { top: 75%; left: 45%; } /* Сикотический */
+.miasma-button:nth-child(7) { top: 85%; left: 25%; } /* Раковый */
+.miasma-button:nth-child(8) { top: 75%; left: 15%; } /* Туберкулиновый */
+.miasma-button:nth-child(9) { top: 65%; left: 5%; } /* Лепрозный */
+.miasma-button:nth-child(10) { top: 35%; left: 5%; } /* Сифилитический */
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .venus-container {
+    min-height: 400px;
+  }
+  
+  .miasma-button {
+    padding: 6px 10px;
+    font-size: 9px;
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .venus-container {
+    min-height: 300px;
+  }
+  
+  .miasma-button {
+    padding: 4px 8px;
+    font-size: 8px;
+    max-width: 80px;
+  }
+}
